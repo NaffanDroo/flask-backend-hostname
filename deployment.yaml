@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: gcr.io/azdo-gcp-dev/flask-backend-hostname:10
+        image: DOCKER_IMAGE_NAME
         ports:
           - containerPort: 5000
         livenessProbe:
