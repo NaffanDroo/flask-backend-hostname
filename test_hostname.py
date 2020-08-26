@@ -30,3 +30,21 @@ def test_hostname(test_client):
     response_json = json.loads(response.data)
     assert response_json["backend_host"] == actual_hostname
 
+
+@pytest.mark.unit
+def test_root_url_redirects(test_client):
+    response = test_client.get('/')
+    actual_hostname = platform.node()
+
+    assert response.status_code == 302
+
+
+@pytest.mark.unit
+def test_root_url_returns_host(test_client):
+    response = test_client.get('/', follow_redirects=True)
+    actual_hostname = platform.node()
+
+    assert response.status_code == 200
+
+    response_json = json.loads(response.data)
+    assert response_json["backend_host"] == actual_hostname
