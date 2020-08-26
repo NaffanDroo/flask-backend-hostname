@@ -11,10 +11,10 @@ FROM base
 
 COPY . /home/app/
 ENV PATH /home/app/.local/bin:$PATH
-ENV FLASK_APP=app.py
+ENV FLASK_APP=main.py
 
 RUN poetry install --no-dev --no-interaction
 
 EXPOSE 5000
 
-CMD poetry run gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 2 app:app
+CMD poetry run gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 2 main:app
