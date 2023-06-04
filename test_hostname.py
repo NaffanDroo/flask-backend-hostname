@@ -1,10 +1,12 @@
-import pytest
-from main import create_app
-import platform
 import json
+import platform
+
+import pytest
+
+from main import create_app
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope="module")
 def test_client():
     app = create_app()
     app.config["TESTING"] = True
@@ -22,7 +24,7 @@ def test_client():
 
 @pytest.mark.unit
 def test_hostname(test_client):
-    response = test_client.get('/v1/host')
+    response = test_client.get("/v1/host")
     actual_hostname = platform.node()
 
     assert response.status_code == 200
@@ -33,7 +35,7 @@ def test_hostname(test_client):
 
 @pytest.mark.unit
 def test_root_url_redirects(test_client):
-    response = test_client.get('/')
+    response = test_client.get("/")
     actual_hostname = platform.node()
 
     assert response.status_code == 302
@@ -41,7 +43,7 @@ def test_root_url_redirects(test_client):
 
 @pytest.mark.unit
 def test_root_url_returns_host(test_client):
-    response = test_client.get('/', follow_redirects=True)
+    response = test_client.get("/", follow_redirects=True)
     actual_hostname = platform.node()
 
     assert response.status_code == 200
