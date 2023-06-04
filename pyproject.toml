@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask-backend-hostname"
-version = "0.1.0"
+version = "1.1.0"
 description = "Basic example python app returning the host name"
 authors = ["Nathan Drew <nath.drew@gmail.com>"]
 license = "MIT"
