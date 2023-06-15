@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/NaffanDroo/flask-backend-hostname/compare/v1.1.0...v1.2.0) (2023-06-15)
+
+
+### Features
+
+* all patches together ([9673791](https://github.com/NaffanDroo/flask-backend-hostname/commit/9673791440fa1b5c7d53e95e716703ba0d1b3750))
+
+
+### Bug Fixes
+
+* Create __init__.py ([#22](https://github.com/NaffanDroo/flask-backend-hostname/issues/22)) ([587cc07](https://github.com/NaffanDroo/flask-backend-hostname/commit/587cc073e325c012c4892addd5c0b64178430537))
+* **deps:** update all dependencies ([#26](https://github.com/NaffanDroo/flask-backend-hostname/issues/26)) ([cbfd827](https://github.com/NaffanDroo/flask-backend-hostname/commit/cbfd8277dba77e52ec3a81e30354635f370bbd51))
+
 ## [1.1.0](https://github.com/NaffanDroo/flask-backend-hostname/compare/1.0.0...v1.1.0) (2023-06-04)
 
 
